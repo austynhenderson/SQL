@@ -1,0 +1,23 @@
+CREATE TABLE sports_store (id INTEGER, item TEXT, price INTEGER, section TEXT, stock INTEGER);
+
+INSERT INTO sports_store VALUES (1, "soccer cleats", 59.99, "shoes", 32);
+INSERT INTO sports_store VALUES (2, "soccer ball", 8.65, "balls", 15);
+INSERT INTO sports_store VALUES (3, "basketball ball", 10.65, "balls", 25);
+INSERT INTO sports_store VALUES (4, "tennis racket", 15.99, "equipment", 3);
+INSERT INTO sports_store VALUES (5, "plastic water bottle", 7.50, "equipment", 32);
+INSERT INTO sports_store VALUES (6, "bottled water", 1, "food", 9);
+INSERT INTO sports_store VALUES (7, "protein bar", 1.50, "food", 17);
+INSERT INTO sports_store VALUES (8, "spandex", 20, "apparel", 5);
+INSERT INTO sports_store VALUES (9, "gloves", 13.99, "apparel", 1);
+INSERT INTO sports_store VALUES (10, "football cleats", 75.55, "shoes", 32);
+INSERT INTO sports_store VALUES (11, "energy chews", 2, "food", 3);
+INSERT INTO sports_store VALUES (12, "baseball", 6, "balls", 24);
+INSERT INTO sports_store VALUES (13, "goggles", 4.20, "equipment", 10);
+INSERT INTO sports_store VALUES (14, "sweatpants", 24.90, "apparel", 12);
+INSERT INTO sports_store VALUES (15, "running shoes", 45.60, "shoes", 28);
+
+--display the database ordered by price.
+SELECT * FROM sports_store ORDER BY price DESC; 
+
+--which section is the most expensive  
+SELECT section, SUM(price) FROM sports_store GROUP BY section ORDER BY price DESC; 
